@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Add = () => {
   const [book, setBook] = useState({
@@ -60,6 +61,10 @@ const Add = () => {
       <button className = "button" onClick={handleClick}>Add</button>
       {error && "Something went wrong!"}
       <Link to="/">See all books</Link>
+      <div>
+      <FontAwesomeIcon icon="check-square" />
+      Your <FontAwesomeIcon icon="coffee" /> is hot and ready!
+    </div>
     </div>
   );
 };
